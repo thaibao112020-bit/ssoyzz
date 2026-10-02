@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Sói</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="umm">
+        <h1>Cafe Sói</h1>
+        <p>Nơi thư giãn và những giây phút tận hưởng</p>
+      </div>
+      <img src="../img/anh1.jpg" alt="Logo" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <content>
+      <section class="hero">
+        <div class="copy">
+          <h1>Chào mừng đến với Cafe Sói</h1>
+          <p>Thưởng thức những ly cà phê tuyệt vời và không gian ấm cúng</p>
+        </div>
+        <div class="menu-heading">
+          <h2>Đồ uống bán chạy</h2>
+        </div>
+        <div class="drink-grid">
+          <article class="drink-card">
+            <img src="../img/anh2.jpg" alt="Cà phê bọt" />
+            <div class="drink-details">
+              <h3>Cà phê bọt</h3>
+              <button class="drink-price" type="button" data-drink="Cà phê bọt" aria-label="Đặt món Cà phê bọt, giá 35.000 đồng">35.000đ</button>
+            </div>
+          </article>
+          <article class="drink-card">
+            <img src="../img/anh3.jpg" alt="Cappuccino" />
+            <div class="drink-details">
+              <h3>Cappuccino</h3>
+              <button class="drink-price" type="button" data-drink="Cappuccino" aria-label="Đặt món Cappuccino, giá 45.000 đồng">45.000đ</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </content>
+    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-title">
+      <form method="dialog">
+        <h2 id="order-title">Cafe Sói</h2>
+        <p class="dialog-message" id="order-message"></p>
+        <label class="quantity-field" id="quantity-field" for="order-quantity">
+          Số lượng
+          <input class="quantity-input" id="order-quantity" type="number" min="1" step="1" value="1" required />
+        </label>
+        <div class="dialog-actions">
+          <button class="dialog-button dialog-cancel" id="cancel-order" value="cancel">Để sau</button>
+          <button class="dialog-button dialog-confirm" id="confirm-order" type="button">Thêm vào đơn</button>
+          <button class="dialog-button dialog-continue" id="continue-order" type="button" hidden>Có, chọn thêm</button>
+          <button class="dialog-button dialog-finish" id="finish-order" type="button" hidden>Không, hoàn tất</button>
+          <button class="dialog-button dialog-close" id="close-order" value="close" hidden>Đóng</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="../java/script.js"></script>
+    <section class="music-section">
+      <div class="music-copy">
+        <p>Hãy tận hưởng âm nhạc khi xem nhá!!</p>
+        <div class="music-visual">
+          <img class="music-image" src="../img/anh4.jpg" alt="Hình ảnh âm nhạc" />
+          <audio id="order-sound" controls loop preload="auto" src="../audio/still love you super slowed reverb.mp3"></audio>
+        </div>
+      </div>
+      <h2>Hãy nhấp vào menu để xem thêm những sản phẩm khác của</h2>
+      <h2>Cafe Sói!</h2>
+    </section>
+    <footer class="site-footer">
+      <p>&copy; 2026 Cafe Sói. All rights reserved.</p>
+      <p>Địa chỉ: 23 Đường Sao, Quận 2, TP.</p>
+      <p>Tận hưởng giây phút của bạn</p>
+    </footer>
+  </body>
+</html>

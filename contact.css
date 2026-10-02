@@ -1,0 +1,249 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: #493b3b;
+	background: #f2e3dc;
+	font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body > header {
+	display: flex;
+	min-height: 300px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	padding: 40px max(8vw, 28px);
+	background:
+		radial-gradient(ellipse at 8% 100%, rgb(255 206 143 / 42%), transparent 38%),
+		linear-gradient(120deg, #f6d8bd, #eeb9b3 58%, #d9b9c7);
+}
+
+.umm h1 {
+	margin: 0 0 16px;
+	color: #744745;
+	font-family: "Merriweather", Georgia, serif;
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.umm p {
+	margin: 0;
+	color: #78605b;
+	font-size: 1.1rem;
+}
+
+body > header img {
+	display: block;
+	width: min(38vw, 360px);
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border: 8px solid rgb(255 255 255 / 72%);
+	border-radius: 12px;
+}
+
+nav {
+	border-top: 1px solid #e6c9bd;
+	background: #f7ebe5;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px 48px;
+	margin: 0;
+	padding: 20px 24px;
+	list-style: none;
+}
+
+nav a {
+	color: #744745;
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	color: #b45f4a;
+	text-decoration: underline;
+}
+
+.contact-content {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 56px 28px 72px;
+}
+
+.contact-heading {
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.contact-heading h2 {
+	margin: 0 0 12px;
+	color: #744745;
+	font-family: "Merriweather", Georgia, serif;
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-heading p,
+.contact-copy p {
+	color: #78605b;
+	line-height: 1.7;
+}
+
+.contact-row {
+	display: grid;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+	align-items: start;
+	gap: 28px;
+}
+
+.contact-copy,
+.feedback-form {
+	padding: 28px;
+	border: 1px solid #ead6cd;
+	border-radius: 12px;
+	background: #fff5ef;
+	box-shadow: 0 12px 28px rgb(73 59 59 / 8%);
+}
+
+.contact-copy h3,
+.feedback-form h3 {
+	margin: 0 0 16px;
+	color: #744745;
+	font-family: "Merriweather", Georgia, serif;
+	font-size: 1.35rem;
+}
+
+.contact-copy p {
+	margin: 0 0 16px;
+}
+
+.contact-copy a {
+	color: #a64f43;
+	font-weight: 600;
+	overflow-wrap: anywhere;
+}
+
+.feedback-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.feedback-form label {
+	margin: 14px 0 7px;
+	color: #744745;
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+	width: 100%;
+	padding: 11px 12px;
+	border: 1px solid #e6c9bd;
+	border-radius: 6px;
+	color: #493b3b;
+	background: #fffaf7;
+	font: inherit;
+}
+
+.feedback-form textarea {
+	min-height: 140px;
+	resize: vertical;
+}
+
+.feedback-form input:focus-visible,
+.feedback-form textarea:focus-visible {
+	outline: 3px solid #e5a66f;
+	outline-offset: 2px;
+}
+
+.feedback-submit {
+	align-self: flex-start;
+	min-height: 44px;
+	margin-top: 20px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 6px;
+	color: #fff;
+	background: #8d5147;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.feedback-submit:hover,
+.feedback-submit:focus-visible {
+	background: #744745;
+}
+
+.feedback-note {
+	margin: 12px 0 0;
+	color: #78605b;
+	font-size: 0.85rem;
+}
+
+.feedback-status {
+	margin: 16px 0 0;
+	padding: 12px 14px;
+	border: 1px solid #c9d9bd;
+	border-radius: 6px;
+	color: #405b3a;
+	background: #edf4e8;
+	line-height: 1.5;
+}
+
+.feedback-status[hidden] {
+	display: none;
+}
+
+.site-footer {
+	padding: 32px 28px 48px;
+	border-top: 1px solid #e6c9bd;
+	background: #efd8ce;
+	text-align: center;
+}
+
+.site-footer p {
+	margin: 8px 0;
+	color: #78605b;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+	body > header {
+		min-height: 0;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		padding: 40px 24px;
+	}
+
+	body > header img {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.contact-content {
+		padding: 40px 24px 56px;
+	}
+
+	.contact-row {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-copy,
+	.feedback-form {
+		padding: 22px;
+	}
+
+	.site-footer {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
